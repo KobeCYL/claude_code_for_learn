@@ -302,13 +302,13 @@ class CustomerChurnAnalyzer:
         print("\n" + "="*50)
         print("ANALYSIS SUMMARY")
         print("="*50)
-        print(f"✓ Original dataset shape: {self.df.shape}")
-        print(f"✓ Engineered dataset shape: {df_engineered.shape}")
-        print(f"✓ Processed dataset shape: {df_processed.shape}")
-        print(f"✓ Training set ready: {X_train.shape}")
-        print(f"✓ Test set ready: {X_test.shape}")
-        print(f"✓ Total features created: {len(df_engineered.columns) - len(self.df.columns)}")
-        print(f"✓ Data preprocessing completed successfully!")
+        print(f"[OK] Original dataset shape: {self.df.shape}")
+        print(f"[OK] Engineered dataset shape: {df_engineered.shape}")
+        print(f"[OK] Processed dataset shape: {df_processed.shape}")
+        print(f"[OK] Training set ready: {X_train.shape}")
+        print(f"[OK] Test set ready: {X_test.shape}")
+        print(f"[OK] Total features created: {len(df_engineered.columns) - len(self.df.columns)}")
+        print(f"[OK] Data preprocessing completed successfully!")
 
         return {
             'X_train': X_train,
@@ -334,9 +334,9 @@ def main():
     results['df_processed'].to_csv('processed_churn_data.csv', index=False)
     results['df_engineered'].to_csv('engineered_churn_data.csv', index=False)
 
-    print("\n✓ Processed data saved to 'processed_churn_data.csv'")
-    print("✓ Engineered data saved to 'engineered_churn_data.csv'")
-    print("✓ Analysis complete! The data is ready for machine learning modeling.")
+    print("\n[OK] Processed data saved to 'processed_churn_data.csv'")
+    print("[OK] Engineered data saved to 'engineered_churn_data.csv'")
+    print("[OK] Analysis complete! The data is ready for machine learning modeling.")
 
 if __name__ == "__main__":
     main()
